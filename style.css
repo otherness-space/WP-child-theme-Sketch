@@ -1,9 +1,13 @@
 /*
 Theme Name: Sketch Child Theme
+Theme URI: https://github.com/otherness-space/childWPThemeSketch
 Description: Child theme created for meaning making in web development through control.
 Author: robGoodfellow
+Author URI: http://otherness.space
 Template: sketch
 Version: 0.0.01
+License: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+License URI: http://creativecommons.org/licenses/by-nc-sa/4.0/
+Tags:
+Text Domain: sketch-child
 */
- 
-@import url("../sketch/style.css")
