@@ -5,18 +5,21 @@ Description: Child theme created for meaning making in web development through c
 Author: robGoodfellow
 Author URI: http://otherness.space
 Template: sketch
-Version: 0.0.0.2.2
+Version: 0.0.0.2.3
 License: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
 License URI: http://creativecommons.org/licenses/by-nc-sa/4.0/
 Tags:
 Text Domain: sketch-child
 */
 
+
 /**
 
 */
 
-/* =Header */
+
+/** Header */
+
 .site-description {
     font-size: 1em;
     line-height: 1;
@@ -27,5 +30,38 @@ Text Domain: sketch-child
     margin: 0;
     position: relative;
     z-index: 2;
+}
 
+/** end Header */
+
+
+/** Footer */
+
+.site-footer {
+    font-size: 0.8125rem;
+    line-height: 2.09231rem;
+    border-top: 3px solid #eeeeee;
+    color: #999999;
+    clear: both;
+    letter-spacing: 1px;
+    margin: 24px 0 0;
+    padding: 14px 0 0;
+    text-align: center;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.site-footer-devanagari {
+    font-size: 1.65rem;
+    color: #999999;
+    clear: both;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100%;
 }
