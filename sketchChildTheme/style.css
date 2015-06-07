@@ -65,3 +65,31 @@ Text Domain: sketch-child
     box-sizing: border-box;
     width: 100%;
 }
+
+/** end footer */
+
+/** textual styles */
+
+/* =Rebuild
+----------------------------------------------- */
+
+html {
+
+    /** font-size: 20px; */
+}
+
+body, button, input, select, textarea {
+
+    font-family: Georgia, "Bitstream Charter", serif;
+}
+
+/* =Global */
+
+body {
+
+    font-family: Lato, Helvetica, Arial, sans-serif;
+
+}
+
+
+/** end textual styles */
