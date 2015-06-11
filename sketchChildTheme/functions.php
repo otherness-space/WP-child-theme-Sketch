@@ -49,43 +49,100 @@ function theme_enqueue_styles() {
 *
 */
 
+
+
 /**
  * Register Google Fonts
  */
-function sketch_fonts_url() {
-    $fonts_url = '';
+
+/**
+ * According to
+ *
+ * http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
+ *
+ * function to take care of all the logic related to these fonts, ... with the
+ * basic outline ... it takes no parameters and returns a string, which starts
+ * out empty.
+ *
+ */
+
+sketch_fonts_url() {
+     $fonts_url = '';
+
+     return $fonts_url;
+}
+
+/**
+ * Add fonts
+ */
 
     /* Translators: If there are characters in your language that are not
-	 * supported by Lato, translate this to 'off'. Do not translate
-	 * into your own language.
-	 */
-	$lato = _x( 'on', 'Lato font: on or off', 'sketch' );
+     * supported by Lora, translate this to 'off'. Do not translate
+     * into your own language.
+     */
+    $rosarivo = _x( 'on', 'Rosarivo font: on or off', 'theme-slug' );
 
-	if ( 'off' !== $lato ) {
-		$font_families = array();
-		$font_families[] = 'Lato:300,400,700,300italic,400italic,700italic';
+    /* Translators: If there are characters in your language that are not
+     * supported by Lora, translate this to 'off'. Do not translate
+     * into your own language.
+     */
+    $inconsolata = _x( 'on', 'Inconsolata font: on or off', 'theme-slug' );
 
-		$query_args = array(
+    /* Translators: If there are characters in your language that are not
+     * supported by Lora, translate this to 'off'. Do not translate
+     * into your own language.
+     */
+    $carme = _x( 'on', 'Carme font: on or off', 'theme-slug' );
+
+    /**
+    * Check if fonts have been deactivated by translators; no need to continue
+    * in that case. Add font names and styles to array. Numbers after colon
+    * represent different styles weights, cursive variants, small caps, etc.
+    */
+
+    /**
+    * Generate fonts URL with $query_args = array
+    */
+
+    if ( 'off' !== $rosarivo || 'off' !== $inconsolata || 'off' !== $carme ) {
+        $font_families = array();
+
+    if ( 'off' !== $rosarivo ) {
+        $font_families[] = 'Rosarivo:400,400italic';
+    }
+
+    if ( 'off' !== $inconsolata ) {
+        $font_families[] = 'Inconsolata:400,700';
+
+    if ( 'off' !== $carme ) {
+        $font_families[] = 'Carme';
+
+        $query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
 			'subset' => urlencode( 'latin,latin-ext' ),
 		);
 
-		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
-	}
+        $fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+    }
 
-	return $fonts_url;
-
+    return $fonts_url;
 }
 
 /**
- * Enqueue Google Fonts for custom headers
- */
-function sketch_admin_scripts() {
+* Enque Google fonts on front end and for custom headers
+*/
 
-	wp_enqueue_style( 'sketch-lato', sketch_fonts_url(), array(), null );
+function sketch_admin_scripts_styles() {
+
+    wp_enqueue_style( 'sketch-rosarivo', 'sketch-inconsolata', 'sketch-carme', sketch_fonts_url(), array(), null );
+}
+add_action( 'wp_enqueue_scripts', 'admin_print_styles-appearance_page_custom-header', 'sketch_admin_scripts_styles' );
+
+function sketch_admin_scripts_styles() {
+
+    wp_dequeue_style( 'sketch-lato' );
 
 }
-add_action( 'admin_print_styles-appearance_page_custom-header', 'sketch_admin_scripts' );
 
 /**
  * Use a pipe for Eventbrite meta separators.
