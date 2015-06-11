@@ -25,7 +25,7 @@ Text Domain: sketch-child
     * Colors and typography
         *
     * Other
-        * 
+        *
 
     * TRBL/trouble: Top/Right/Bottom/Left should be the order
     * Corner specifiers: top-left-, top-right, bottom-right, bottom-left
@@ -41,8 +41,28 @@ Text Domain: sketch-child
 
 /** Box model */
 
+    /*
+    *
+    * terminal box style
+    *
+    */
+
 
 /** Colors and typography */
+
+    /*
+    * terminal box style using some of Atom Dark Syntax
+    *
+    * https://github.com/atom/atom-dark-syntax
+    *
+    */
+
+    /*
+    * terminal box style using some of ol styles from
+    *
+    * Scraped from http://stackoverflow.com/questions/11946098/how-to-remove-dot-after-number-in-ordered-list-items-in-ol-li
+    *
+    */
 
 
 /** Other */
