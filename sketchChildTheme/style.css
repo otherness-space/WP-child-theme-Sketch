@@ -15,7 +15,43 @@ Text Domain: sketch-child
 
 /**
 
+* Property ordering
+    * Display
+        *
+    * Positioning
+        *
+    * Box model
+        *
+    * Colors and typography
+        *
+    * Other
+        * 
+
+    * TRBL/trouble: Top/Right/Bottom/Left should be the order
+    * Corner specifiers: top-left-, top-right, bottom-right, bottom-left
+
 */
+
+
+/** Display */
+
+
+/** Positioning */
+
+
+/** Box model */
+
+
+/** Colors and typography */
+
+
+/** Other */
+
+
+/** Placeholder */
+
+
+/** Placeholder */
 
 
 /** Header */
